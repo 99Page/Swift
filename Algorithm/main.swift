@@ -7,5 +7,6 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let pq: PriorityQueue<Int> = PriorityQueue<Int> {
+    return $0 >= $1 // 값이 큰 순서대로 정렬
+}
