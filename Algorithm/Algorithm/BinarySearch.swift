@@ -7,6 +7,8 @@
 
 import Foundation
 
+//  MARK: 이분탐색, lowerBound, upperBound
+
 extension Array where Element: Comparable {
 
     func lowerBound(target: Element) -> Int {
