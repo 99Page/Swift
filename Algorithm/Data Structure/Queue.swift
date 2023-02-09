@@ -7,7 +7,7 @@
 
 import Foundation
 
-//  MARK: Queue, 큐 
+// Queue, 큐 
 
 struct DoubleStackQueue<Element> {
     private var inbox: [Element] = []
