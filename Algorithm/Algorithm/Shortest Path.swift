@@ -10,8 +10,8 @@ import Foundation
 //  출발노드 0번을 기준으로 한다.
 
 struct Edge {
-    let node: Int
-    let dist: Int
+    let destination: Int
+    let weight: Int
 }
 
 //  MARK: 다익스트라 Dijkstra
@@ -24,26 +24,26 @@ func dijkstra(size: Int, start: Int, edges: [[Edge]]) -> [Int] {
     dists[start] = 0
     
     // 거리를 기준으로 오름차순 정렬
-    var pq: PriorityQueue<Edge> = PriorityQueue { $0.dist < $1.dist }
-    pq.push(Edge(node: start, dist: 0))
+    var pq: PriorityQueue<Edge> = PriorityQueue { $0.weight < $1.weight }
+    pq.push(Edge(destination: start, weight: 0))
     
     
     while !pq.isEmpty() {
         let cur = pq.pop()!
-        let node = cur.node
-        let dist = cur.dist
+        let node = cur.destination
+        let dist = cur.weight
         
         if dists[node] < dist {
             continue
         }
         
         for edge in edges[node] {
-            let newNode = edge.node
-            let newDist = dist + edge.dist
+            let newNode = edge.destination
+            let newDist = dist + edge.weight
             
             if newDist < dists[newNode] {
                 dists[newNode] = newDist
-                pq.push(Edge(node: newNode, dist: newDist))
+                pq.push(Edge(destination: newNode, weight: newDist))
             }
         }
         
@@ -61,8 +61,8 @@ func bellmanford(size: Int, start: Int, edges: [[Edge]]) -> [Int] {
     for _ in 0..<size-1 {
         for start in 0..<edges.count  {
             for edge in edges[start] {
-                if dists[start] != Int.max && dists[edge.node] > dists[start] + edge.dist {
-                    dists[edge.node] = dists[start] + edge.dist
+                if dists[start] != Int.max && dists[edge.destination] > dists[start] + edge.weight {
+                    dists[edge.destination] = dists[start] + edge.weight
                 }
             }
         }
@@ -70,7 +70,7 @@ func bellmanford(size: Int, start: Int, edges: [[Edge]]) -> [Int] {
     
     for start in 0..<edges.count {
         for edge in edges[start] {
-            if dists[start] != Int.max && dists[edge.node] > dists[start] + edge.dist {
+            if dists[start] != Int.max && dists[edge.destination] > dists[start] + edge.weight {
                 print("음수 사이클이 존재함")
                 break
             }
