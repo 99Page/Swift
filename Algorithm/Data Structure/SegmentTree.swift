@@ -3,7 +3,7 @@
 //  Algorithm
 //
 //  Created by 노우영 on 2023/02/12.
-//  SegmentTree 세그먼트트리
+//  Segment Tree 세그먼트 트리
 
 import Foundation
 

@@ -2,8 +2,8 @@
 //  MinimumSpanningTree.swift
 //  Algorithm
 //
-//  Created by 노우영 on 2023/02/12.
-//  MST Prim 프림
+//  Created by 노우영 on 2023/02/
+//  Minumum Spanning Tree MST Prim 프림
 
 import Foundation
 

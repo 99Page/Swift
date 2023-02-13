@@ -3,11 +3,10 @@
 //  Algorithm
 //
 //  Created by 노우영 on 2023/02/09.
-//
 
 import Foundation
 
-// 이분탐색, lowerBound, upperBound
+// 이분 탐색, lower bound, upper bound, binary search 
 
 extension Array where Element: Comparable {
 

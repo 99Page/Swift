@@ -3,7 +3,7 @@
 //  Algorithm
 //  Created by 노우영 on 2023/02/12.
 //  벨만포드, 다익스트라, 플로이드 워셜
-//  Dijkstra, FloydWarshall, BellmanFord
+//  Dijkstra, Floyd Warshall, Bellman Ford
 
 import Foundation
 

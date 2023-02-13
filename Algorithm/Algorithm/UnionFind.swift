@@ -3,7 +3,7 @@
 //  Algorithm
 //
 //  Created by 노우영 on 2023/02/12.
-//  UnionFind, 유니온파인드 
+//  union find, 유니온 파인드 
 
 import Foundation
 
